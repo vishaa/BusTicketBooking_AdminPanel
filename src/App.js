@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Routes, Navigate } from 'react-router-dom';
 import ReservationView from './components/Reservation/ReservationView';
 import DashboardView from './components/Dashboard/DashboardView';
 
@@ -9,6 +9,7 @@ const App = () => {
       <div className="App">
         <Navigation />
         <Routes>
+        <Route path="/" element={<Navigate to="/reservation" />} />
           <Route path="/reservation" element={<ReservationView />} />
           <Route path="/dashboard" element={<DashboardView />} />
         </Routes>

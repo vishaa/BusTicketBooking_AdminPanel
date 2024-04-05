@@ -30,7 +30,7 @@ function ReservationView() {
 
       <h2>Lower Deck</h2>
       <div>
-        {seats.slice(0, 20).map((isSelected, index) => (
+        {seats.slice(0, 10).map((isSelected, index) => (
           <Seat
             key={`lower_${index}`}
             seatNumber={index + 1}
@@ -42,12 +42,38 @@ function ReservationView() {
         ))}
       </div>
 
+      <div>
+        {seats.slice(10, 20).map((isSelected, index) => (
+          <Seat
+            key={`lower_${index}`}
+            seatNumber={index + 11}
+            isSelected={isSelected}
+            handleIsSelected={() => handleIsSelected(index)}
+            hasReservationPopup={hasReservationPopup}
+            handleHasReservationPopup={handleHasReservationPopup}
+          />
+        ))}
+      </div>
+
       <h2>Upper Deck</h2>
       <div>
-        {seats.slice(20).map((isSelected, index) => (
+        {seats.slice(20, 30).map((isSelected, index) => (
           <Seat
             key={`upper_${index}`}
             seatNumber={index + 21}
+            isSelected={isSelected}
+            handleIsSelected={() => handleIsSelected(index + 20)}
+            hasReservationPopup={hasReservationPopup}
+            handleHasReservationPopup={handleHasReservationPopup}
+          />
+        ))}
+      </div>
+
+      <div>
+        {seats.slice(30).map((isSelected, index) => (
+          <Seat
+            key={`upper_${index}`}
+            seatNumber={index + 31}
             isSelected={isSelected}
             handleIsSelected={() => handleIsSelected(index + 20)}
             hasReservationPopup={hasReservationPopup}
