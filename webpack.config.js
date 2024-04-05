@@ -35,5 +35,5 @@ module.exports = {
       template: './public/index.html',
     }),
   ],
-  mode: argv.mode === "development" ? "inline-source-map" : false
+  mode: "production",
 };
