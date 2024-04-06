@@ -18,6 +18,7 @@ function ReservationView() {
   const updateSeat = (index) => {
     const updatedSeats = [...seats];
     updatedSeats[index] = !updatedSeats[index];
+    console.log(updatedSeats);
     setSeats(updatedSeats);
   }
 
@@ -32,7 +33,7 @@ function ReservationView() {
       <div>
         {seats.slice(0, 10).map((isSelected, index) => (
           <Seat
-            key={`lower_${index}`}
+            key={`lower1_${index}`}
             seatNumber={index + 1}
             isSelected={isSelected}
             handleIsSelected={() => handleIsSelected(index)}
@@ -45,10 +46,10 @@ function ReservationView() {
       <div>
         {seats.slice(10, 20).map((isSelected, index) => (
           <Seat
-            key={`lower_${index}`}
+            key={`lower2_${index}`}
             seatNumber={index + 11}
             isSelected={isSelected}
-            handleIsSelected={() => handleIsSelected(index)}
+            handleIsSelected={() => handleIsSelected(index + 10)}
             hasReservationPopup={hasReservationPopup}
             handleHasReservationPopup={handleHasReservationPopup}
           />
@@ -59,7 +60,7 @@ function ReservationView() {
       <div>
         {seats.slice(20, 30).map((isSelected, index) => (
           <Seat
-            key={`upper_${index}`}
+            key={`upper1_${index}`}
             seatNumber={index + 21}
             isSelected={isSelected}
             handleIsSelected={() => handleIsSelected(index + 20)}
@@ -72,10 +73,10 @@ function ReservationView() {
       <div>
         {seats.slice(30).map((isSelected, index) => (
           <Seat
-            key={`upper_${index}`}
+            key={`upper2_${index}`}
             seatNumber={index + 31}
             isSelected={isSelected}
-            handleIsSelected={() => handleIsSelected(index + 20)}
+            handleIsSelected={() => handleIsSelected(index + 30)}
             hasReservationPopup={hasReservationPopup}
             handleHasReservationPopup={handleHasReservationPopup}
           />
