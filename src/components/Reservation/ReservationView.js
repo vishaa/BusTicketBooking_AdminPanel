@@ -18,7 +18,6 @@ function ReservationView() {
   const updateSeat = (index) => {
     const updatedSeats = [...seats];
     updatedSeats[index] = !updatedSeats[index];
-    console.log(updatedSeats);
     setSeats(updatedSeats);
   }
 
