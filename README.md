@@ -20,13 +20,19 @@ Date of Booking
 Provides functionality to edit passenger details (except seat number) and delete reservations.
 
 ## To install dependencies
-`npm install `
+```
+npm install 
+```
 
 ## To run the app locally 
-`npm start`
+```
+npm start
+```
 
 ## To build the app
-`npm run build`
+```
+npm run build
+```
 
 ## Click on the below link to visit the app
 [https://authenticate9.surge.sh/](https://authenticate9.surge.sh/)
