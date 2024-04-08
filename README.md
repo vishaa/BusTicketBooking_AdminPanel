@@ -33,6 +33,3 @@ npm start
 ```
 npm run build
 ```
-
-## Click on the below link to visit the app
-[https://authenticate9.surge.sh/](https://authenticate9.surge.sh/)
